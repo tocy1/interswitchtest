@@ -1,0 +1,4 @@
+kafka:
+  port: 9092
+zookeeper:
+  port: 2181
