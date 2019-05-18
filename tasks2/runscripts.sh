@@ -2,9 +2,9 @@
 
 echo "creating a docker network to enable visibility"
 docker network create appnetwork --driver bridge
-#build the haproxy container
+echo "building the haproxy container"
 docker build -t my-haproxy .
-#run the container
+echo "running the ha-proxy container"
 docker run -d --name my-running-haproxy my-haproxy --network appnetwork -p 80:80
 for i in {1..2}
 do 
