@@ -1,3 +1,7 @@
+- name: update the system
+  yum:
+          name: "*"
+          state: latest
 - name: create a docker network
   docker_network:
           name: app-network
