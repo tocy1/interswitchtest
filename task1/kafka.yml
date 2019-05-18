@@ -1,0 +1,7 @@
+---
+- hosts: ansible-slave
+  become: true
+  roles: 
+    - firewalld
+    - docker
+    - kafka
