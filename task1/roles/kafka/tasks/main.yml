@@ -3,7 +3,7 @@
           name: app-network
           driver: bridge
 - name: create  the first Zookeeper server instance
-  docker:
+  docker_container:
           name: zookeeper
           image: bitnami/zookeeper:latest
           state: started
@@ -12,7 +12,7 @@
           networks:
                   name: "{{app-network}}"
 - name: Create the first node for Kafka
-  docker:
+  docker_container:
           name: kafka1
           image: bitnami/kafka:latest
           state: started
@@ -24,7 +24,7 @@
                   name: "{{app-network}}"
 
 - name: Create the second node for Kafka
-  docker:
+  docker_container:
           name: kafka2
           image: bitnami/kafka:latest
           state: started
@@ -36,7 +36,7 @@
                   name: "{{app-network}}"
 
 - name: Create the third node for Kafka
-  docker:
+  docker_container:
           name: kafka3
           image: bitnami/kafka:latest
           state: started
