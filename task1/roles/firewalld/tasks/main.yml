@@ -8,7 +8,7 @@
 
 - name: set port policy
   firewalld: 
-    port: {{ item }}/tcp 
+    port: "{{ item }}"/tcp 
     permanent: true 
     state: enabled 
     immediate: yes
