@@ -10,7 +10,7 @@
           ports:
                   - "2181:2181"
           networks:
-                  name: "{{app-networrk}}"
+                  name: "{{app-network}}"
 - name: Create the first node for Kafka
   docker:
           name: kafka1
@@ -21,7 +21,7 @@
           env:
                   "KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181"
           networks:
-                  name: "{{app-networrk}}"
+                  name: "{{app-network}}"
 
 - name: Create the second node for Kafka
   docker:
@@ -33,7 +33,7 @@
           env:
                   "KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181"
           networks:
-                  name: "{{app-networrk}}"
+                  name: "{{app-network}}"
 
 - name: Create the third node for Kafka
   docker:
@@ -45,5 +45,5 @@
           env:
                   "KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181"
           networks:
-                  name: "{{app-networrk}}"
+                  name: "{{app-network}}"
 
